@@ -10,4 +10,6 @@ node ip-10-0-6-98 {
 }
 
 node ip-10-0-6-209 {
+    class { 'sshd': }  #use sshd module
+
 }
