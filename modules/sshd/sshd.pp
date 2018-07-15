@@ -12,13 +12,13 @@ class sshd {
         mode => '0600',
         source => 'puppet:///modules/sshd/sshd_config',
         require => Package['openssh-server'],
-        notify => Service['sshd']
+        notify => Service['sshd'],
     }
     #keeps the service running.
-    service['sshd':
+    service{'sshd':
        ensure => running,
        enable => true,
-       require => Package['openssh-server']
+       require => Package['openssh-server'],
     }
 
 }
