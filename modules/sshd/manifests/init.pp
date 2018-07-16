@@ -6,7 +6,7 @@ class sshd {
     
     #shares the config file
     file{'sshd_config':
-        ensure => file.
+        ensure => file,
         path => '/etc/ssh/sshd_config', #ensure this file exists, if not copy from source
         owner => 'root',
         mode => '0600',
