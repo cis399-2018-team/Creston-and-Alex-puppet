@@ -10,7 +10,7 @@ class sshd {
         path => '/etc/ssh/sshd_config', #ensure this file exists, if not copy from source
         owner => 'root',
         mode => '0600',
-        source => 'puppet:///modules/sshd/sshd_config',
+        source => 'puppet:///modules/sshd/files/sshd_config',
         require => Package['openssh-server'],
         notify => Service['sshd'],
     }
