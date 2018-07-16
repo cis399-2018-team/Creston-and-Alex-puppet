@@ -24,7 +24,7 @@ SyslogFacility AUTH
 LogLevel INFO
 
 # Authentication:
-LoginGraceTime 120
+LoginGraceTime 100 #default 120
 PermitRootLogin prohibit-password
 StrictModes yes
 
