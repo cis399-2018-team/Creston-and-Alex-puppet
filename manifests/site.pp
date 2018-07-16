@@ -1,4 +1,5 @@
 node ip-10-0-6-195 {
+        include 'sshd' 
 	cron { "puppet update":
 		command => "cd /etc/puppet && git pull -q origin master",
 		user    => root,
@@ -7,9 +8,9 @@ node ip-10-0-6-195 {
 }
 
 node ip-10-0-6-98 {
+    include 'sshd'
 }
 
 node ip-10-0-6-209 {
-    class { 'sshd': }  #use sshd module
-
+    include 'sshd' 
 }
