@@ -11,8 +11,6 @@ class apache {
 		path    => '/var/www/html/index.html',
 		content => '<h1>Hello, World</h1>',
 		require => Package['apache2'],
-		owner   => root,
-		mode    => '0600',
 		notify  => Service['apache'],
 	}
 
