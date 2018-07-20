@@ -1,4 +1,4 @@
-class apache2 {
+class apache {
 
 	# install
 	package{'apache2':
