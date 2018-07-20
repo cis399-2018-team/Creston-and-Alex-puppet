@@ -11,11 +11,11 @@ class apache {
 		path    => '/var/www/html/index.html',
 		content => '<h1>Hello, World</h1>',
 		require => Package['apache2'],
-		notify  => Service['apache'],
+		notify  => Service['httpd'],
 	}
 
 	#keeps service running
-	service{'apache':
+	service{'httpd':
 		ensure     => running,
 		enable     => true,
 		hasrestart => true, 
