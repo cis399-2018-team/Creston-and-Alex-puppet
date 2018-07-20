@@ -17,7 +17,7 @@ class apache {
 	}
 
 	#keeps service running
-	service{'httpd':
+	service{'apache':
 		ensure     => running,
 		enable     => true,
 		hasrestart => true, 
