@@ -6,7 +6,7 @@ class apache {
 	}
 	
 	#webpage resource
-	file{'/var/www/html/index.html':
+	file{'index.html':
 		ensure  => file,
 		path    => '/var/www/html/index.html',
 		content => '<h1>Hello, World</h1>',
