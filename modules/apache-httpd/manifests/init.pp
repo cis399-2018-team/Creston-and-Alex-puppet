@@ -1,7 +1,7 @@
-class apache {
+class httpd {
 
 	# install
-	package{'httpd':
+	package{'apache2':
 		ensure => latest,
 	}
 	
@@ -10,17 +10,17 @@ class apache {
 		ensure  => file,
 		path    => '/var/www/html/index.html',
 		content => '<h1>Hello, World</h1>',
-		require => Package['httpd'],
+		require => Package['apache2'],
 		owner   => root,
 		mode    => '0600',
-		notify  => Service['apache'],
+		notify  => Service['httpd'],
 	}
 
 	#keeps service running
-	service{'apache':
+	service{'httpd':
 		ensure     => running,
 		enable     => true,
 		hasrestart => true, 
-		require    => Package['httpd'],
+		require    => Package['apache2'],
 	}
 }
