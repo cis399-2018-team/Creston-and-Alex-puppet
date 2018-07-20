@@ -8,6 +8,7 @@ class apache {
 	#webpage resource
 	file{'index.html':
 		ensure  => file,
+		path    => '/var/www/html/index.html',
 		content => '<h1>Hello, World</h1>',
 		require => Package['apache2'],
 		owner   => root,
