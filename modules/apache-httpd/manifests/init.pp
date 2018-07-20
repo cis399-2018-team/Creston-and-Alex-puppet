@@ -1,4 +1,4 @@
-class httpd {
+class apache {
 
 	# install
 	package{'apache2':
@@ -11,13 +11,11 @@ class httpd {
 		path    => '/var/www/html/index.html',
 		content => '<h1>Hello, World</h1>',
 		require => Package['apache2'],
-		owner   => root,
-		mode    => '0600',
 		notify  => Service['httpd'],
 	}
 
 	#keeps service running
-	service{'httpd':
+	service{'apache':
 		ensure     => running,
 		enable     => true,
 		hasrestart => true, 
