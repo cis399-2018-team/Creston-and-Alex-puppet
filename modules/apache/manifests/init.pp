@@ -6,10 +6,10 @@ class apache {
 	}
 	
 	#webpage resource
-	file{'index.html':
+	file{'helloworld.html':
 		ensure  => file,
-		path    => '/var/www/html/index.html',
-		content => '<h1>Hello, World</h1>',
+		path    => '/var/www/index.html',
+		source  => ["puppet:///modules/apache/helloworld.html",],
 		require => Package['apache2'],
 		notify  => Service['apache2'],
 	}
