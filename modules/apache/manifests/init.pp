@@ -22,7 +22,7 @@ class apache {
 		require    => Package['apache2'],
 	}
 	
-	apache::vhost { 'webpage399.com':
+	apache2::vhost { 'webpage399.com':
     		port    => '80',
 		docroot => '/var/www'
     }
