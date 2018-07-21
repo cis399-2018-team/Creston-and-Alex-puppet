@@ -21,4 +21,9 @@ class apache {
 		hasrestart => true, 
 		require    => Package['apache2'],
 	}
+	
+	apache::vhost { 'webpage399.com':
+    		port    => '80',
+		docroot => '/var/www'
+    }
 }
