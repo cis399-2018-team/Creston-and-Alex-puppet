@@ -8,7 +8,7 @@ class apache {
 	#webpage resource
 	file{'helloworld.html':
 		ensure  => file,
-		path    => '/var/www/index.html',
+		path    => '/var/www/html/index.html',
 		source  => ["puppet:///modules/apache/helloworld.html",],
 		require => Package['apache2'],
 		notify  => Service['apache2'],
@@ -21,9 +21,4 @@ class apache {
 		hasrestart => true, 
 		require    => Package['apache2'],
 	}
-	
-	apache2::vhost { 'webpage399.com':
-    		port    => '80',
-		docroot => '/var/www'
-    }
 }
