@@ -7,16 +7,14 @@ class apache {
 	
 	file{'/etc/apache2/apache2.conf':
 		ensure  => present,
-		source  => ["puppet:///modules/apache/$hostname/apache2.conf",
-			"puppet:///modules/apache/apache2.conf"],
+		source  => ["puppet:///modules/apache/files/apache2.conf"],
 		require => Package['apache2'],
 	}	
 
 	#webpage resource
-	file{'/var/www/html/index.html':
-		ensure  => file,
-		path    => '/var/www/html/index.html',
-		source  => ["puppet:///modules/apache/files/index.html",],
+	file{'/var/www/html':
+		ensure  => directory,
+		source  => ["puppet:///modules/apache/files/html",],
 		require => Package['apache2'],
 		notify  => Service['apache2'],
 	}
