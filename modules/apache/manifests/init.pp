@@ -14,8 +14,8 @@ class apache {
 	#webpage resource
 	file{'/var/www/html/index.html':
 		ensure  => file,
-		path    => '/var/www/html/index.html',
 		source  => ["puppet:///modules/apache/index.html",],
+		recurse => true,
 		require => Package['apache2'],
 		notify  => Service['apache2'],
 	}
@@ -24,7 +24,9 @@ class apache {
 	service{'apache2':
 		ensure     => running,
 		enable     => true,
+		hasstatus  => true,
 		hasrestart => true, 
-		require    => Package['apache2'],
+		require    => [Package['apache2'], File["/etc/apache2/apache2.conf"], File["/var/www/html/index.html"]],
+		subscribe  => File["/etc/apache2/apache2.conf"],
 	}
 }
