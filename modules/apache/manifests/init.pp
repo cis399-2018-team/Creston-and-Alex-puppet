@@ -16,7 +16,7 @@ class apache {
 	file{'/var/www/html/index.html':
 		ensure  => file,
 		path    => '/var/www/html/index.html',
-		source  => ["puppet:///modules/apache/var/www/html/index.html",],
+		source  => ["puppet:///modules/apache/files/index.html",],
 		require => Package['apache2'],
 		notify  => Service['apache2'],
 	}
