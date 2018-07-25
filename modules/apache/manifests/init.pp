@@ -17,7 +17,6 @@ class apache {
                 recurse => true,
 		source  => ["puppet:///modules/apache/html",],
 		require => Package['apache2'],
-		notify  => Service['apache2'],
 	}
 
 	#keeps service running
