@@ -16,10 +16,10 @@ class sshd {
     }
     #keeps the service running.
     service{'sshd':
-       ensure => running,
-       enable => true,
-       hasrestart => true,
-       require => Package['openssh-server'],
+    	ensure => running,
+        enable => true,
+        hasrestart => true,
+        require => Package['openssh-server'],
     }
     ssh_authorized_key { "aarcher":
         user => "ubuntu",
@@ -28,16 +28,18 @@ class sshd {
     }
 
     ssh_authorized_key { "crestonw_id.pem":
-        user => "ubuntu",
+    	user => "ubuntu",
         type => "ssh-rsa",
         key => "AAAAB3NzaC1yc2EAAAADAQABAAABAQCsKvx2vaiCHFr51hHOcav1y1GDMNQfVvFRV+pJ0aRplnd/lqlOigK3jchNJyh92fe9sgwL8xqCyo2LxWbsNP0Hu3GasRu4MUFF9l4H4HpTDhp6GHfCpeTQgkQsqqLk7UCU7EL/XDEaQnIJNxw8ITzFRxxtezWzNv5xBABx3c9TTGTyw1JgI+EVGvT7rTNyaSidltbgB9tD58ubgXj9TNQlqs/1N0C2RVVEEJblzezSnrps2rLJP5Tj+VfGTlniJrzRRt7v89MLV8Cen0kawOFIznZYxOcAVSV1Zhrob0DWFf7NRUDml9DPlyBNUas6//z00FMRd/W4xBbmn0z8okV/",
     }
     
     user { "quinn":
+    	ensure => present,
+        shell  => '/bin/bash',
        
-       shell => '/bin/bash',
-       
-       "mhernan":
+    	"mhernan":
+        ensure => present,
+        shell  => '/bin/bash',
     }
     
     ssh_authorized_key { "quinn_key":
@@ -52,7 +54,8 @@ class sshd {
 	}
     
     user { "jbeder1":
-    
+    	ensure => present,
+    	shell  => '/bin/bash',
     }
     
     ssh_authorized_key { "jbeder1":
@@ -63,7 +66,8 @@ class sshd {
     }
 
     user { "dbeeman":
-    
+        ensure => present,
+    	shell  => '/bin/bash',
     }
     
 	ssh_authorized_key { "dbeeman":
@@ -74,7 +78,8 @@ class sshd {
     }
     
     user { "mhagel2":
-    
+        ensure => present,
+    	shell  => '/bin/bash',
     }
     
 	ssh_authorized_key {"mhagel2":
@@ -85,7 +90,8 @@ class sshd {
     }
     
     user { "vohoanvu":
-    
+        ensure => present,
+    	shell  => '/bin/bash',
     }
     
     ssh_authorized_key { "vohoanvu-key-pair-oregon":
@@ -95,7 +101,8 @@ class sshd {
 	}
 
     user { "vandrea":
-    
+        ensure => present,
+    	shell  => '/bin/bash',
     }
     
 	ssh_authorized_key { "vandrea-key-pair-oregon":
@@ -105,8 +112,13 @@ class sshd {
 	}
     
     user { "injoker":
-    
-        "mntnttil":
+        ensure => present,
+    	shell  => '/bin/bash',
+	
+        "mantail":
+	ensure => present,
+    	shell  => '/bin/bash',
+	
     }
     
     ssh_authorized_key { "injokerCIS399":
@@ -115,13 +127,14 @@ class sshd {
 		key  => "AAAAB3NzaC1yc2EAAAADAQABAAABAQCbdoZIN0kuw7SZd428Ibv0fsrmijw3lXun+AYQgvcfGhwHNO/fRgGS1LeaEfcIhzJQ/86r2OOMpO0C9w9vnkXSPbspFGofzQu2nH5w7a12i91d47FLd6wVbT9FQYJC+IbYVl1Xw3S9KUsMwgA9ovLfy00ejRWPf2sH/DjCNWCKbXWn7s9B4EWGeClIfrs0FCP+YZ3RsZfahn/oB1FT9dNqHrHaKNjd2TlDWu3oBVJJEUNPZml8gnD/tOhFaJbdZdTU+qNtFHv+AlXrhixhvax0UG2Y/c22ofWOyxeqYS8xgoQRpugkBIGaILkAa0IzB7BzhlfU0QYCOnR1K7D9QAqj";
 			
 		"mntnttil":
-		user => "mntnttil",
+		user => "mantail",
 		type => "ssh-rsa",
 		key  => "AAAAB3NzaC1yc2EAAAADAQABAAABAQC9BuBjjJyPbszba4CItoNN8D7OqYY9qhPK+r4givMcs9mam544FvC4pIvRGr++emaPRlGUo/VJgPzm5l/m6XCrkLTfJZbPozHGdE27rgPY1dfZav+1TMahVo4pFs9O3AqQ8At92PkgxzdgorreCC9bLqFm4gEFIk2liWYynKATxKXyqBA4pZ9WT4tjo4XDkuHMQ+DfWcYWwMeIu/TqMJcLAKQZEznQ0RExwfX7NNK1PASp621ocekShbQ09ui3dCWFzT081mZwy/f3ejHFGKmPNdRsHsb4epkW8TFZVSB7/k+gETFbvdcLFW11VJwpHLMMCUYOAxbO0qOundqIxxk/"; 
 	}
     
     user { "alonzo":
-    
+        ensure => present,
+    	shell  => '/bin/bash',
     }
     
     ssh_authorized_key {"alonzoCIS399":
@@ -131,7 +144,8 @@ class sshd {
     }
     
     user { "ktbill":
-    
+        ensure => present,
+    	shell  => '/bin/bash',
     }
 
     ssh_authorized_key {"ktb11":
@@ -141,7 +155,8 @@ class sshd {
     }
     
     user { "alegge":
-    
+        ensure => present,
+    	shell  => '/bin/bash',
     }
     
     ssh_authorized_key { 'alegge':
@@ -152,7 +167,8 @@ class sshd {
 	}
 
     user { "alajaji":
-    
+        ensure => present,
+    	shell  => '/bin/bash',
     }
     
 	ssh_authorized_key { 'alajaji':
@@ -163,7 +179,8 @@ class sshd {
 	}
 
     user { "ashears":
-    
+        ensure => present,
+    	shell  => '/bin/bash',
     }
     
 	ssh_authorized_key { 'ashears_keypair':
@@ -174,7 +191,8 @@ class sshd {
 	}
     
     user { "stevev":
-    
+        ensure => present,
+    	shell  => '/bin/bash',
     }
     
     ssh_authorized_key { 'stevev_key':
