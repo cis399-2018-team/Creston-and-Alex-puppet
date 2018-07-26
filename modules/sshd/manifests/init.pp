@@ -36,8 +36,9 @@ class sshd {
     user { "quinn":
     	ensure => present,
         shell  => '/bin/bash',
-       
-    	"mhernan":
+    }
+    
+    user { "mhernan":
         ensure => present,
         shell  => '/bin/bash',
     }
@@ -114,11 +115,11 @@ class sshd {
     user { "injoker":
         ensure => present,
     	shell  => '/bin/bash',
+    }
 	
-        "mantail":
+    user { "mantail":
 	ensure => present,
     	shell  => '/bin/bash',
-	
     }
     
     ssh_authorized_key { "injokerCIS399":
