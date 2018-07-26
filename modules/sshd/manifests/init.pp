@@ -35,11 +35,13 @@ class sshd {
     
     user { "quinn":
     	ensure => present,
+	home   => '/home/quinn',
         shell  => '/bin/bash',
     }
     
     user { "mhernan":
         ensure => present,
+	home   => '/home/mhernan',
         shell  => '/bin/bash',
     }
     
@@ -57,6 +59,7 @@ class sshd {
     
     user { "jbeder1":
     	ensure => present,
+	home   => '/home/jbeder1',
     	shell  => '/bin/bash',
     }
     
@@ -69,6 +72,7 @@ class sshd {
 
     user { "dbeeman":
         ensure => present,
+	home   => '/home/dbeeman',
     	shell  => '/bin/bash',
     }
     
@@ -81,6 +85,7 @@ class sshd {
     
     user { "mhagel2":
         ensure => present,
+	home   => '/home/mhagel2',
     	shell  => '/bin/bash',
     }
     
@@ -93,6 +98,7 @@ class sshd {
     
     user { "vohoanvu":
         ensure => present,
+	home   => '/home/vohoanvu',
     	shell  => '/bin/bash',
     }
     
@@ -104,6 +110,7 @@ class sshd {
 
     user { "vandrea":
         ensure => present,
+	home   => '/home/vandrea',
     	shell  => '/bin/bash',
     }
     
@@ -115,11 +122,13 @@ class sshd {
     
     user { "injoker":
         ensure => present,
+	home   => '/home/injoker',
     	shell  => '/bin/bash',
     }
 	
     user { "mantail":
 	ensure => present,
+	home   => '/home/mantail',
     	shell  => '/bin/bash',
     }
     
@@ -137,6 +146,7 @@ class sshd {
     
     user { "alonzo":
         ensure => present,
+	home   => '/home/alonzo',
     	shell  => '/bin/bash',
     }
     
@@ -148,6 +158,7 @@ class sshd {
     
     user { "ktbill":
         ensure => present,
+	home   => '/home/ktbill',
     	shell  => '/bin/bash',
     }
 
@@ -159,6 +170,7 @@ class sshd {
     
     user { "alegge":
         ensure => present,
+	home   => '/home/alegge',
     	shell  => '/bin/bash',
     }
     
@@ -171,6 +183,7 @@ class sshd {
 
     user { "alajaji":
         ensure => present,
+	home   => '/home/alajaji',
     	shell  => '/bin/bash',
     }
     
@@ -183,6 +196,7 @@ class sshd {
 
     user { "ashears":
         ensure => present,
+	home   => '/home/ashears',
     	shell  => '/bin/bash',
     }
     
@@ -195,6 +209,7 @@ class sshd {
     
     user { "stevev":
         ensure => present,
+	home   => '/home/stevev',
     	shell  => '/bin/bash',
     }
     
