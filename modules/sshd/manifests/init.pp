@@ -34,15 +34,17 @@ class sshd {
     }
     
     user { "quinn":
-    	ensure => present,
-	home   => '/home/quinn',
-        shell  => '/bin/bash',
+    	ensure     => present,
+	home       => '/home/quinn',
+        shell      => '/bin/bash',
+	managehome => true,
     }
     
     user { "mhernan":
-        ensure => present,
-	home   => '/home/mhernan',
-        shell  => '/bin/bash',
+        ensure     => present,
+	home       => '/home/mhernan',
+        shell  	   => '/bin/bash',
+	managehome => true,
     }
     
     ssh_authorized_key { "quinn_key":
@@ -58,9 +60,10 @@ class sshd {
     }
     
     user { "jbeder1":
-    	ensure => present,
-	home   => '/home/jbeder1',
-    	shell  => '/bin/bash',
+    	ensure     => present,
+	home       => '/home/jbeder1',
+    	shell      => '/bin/bash',
+	managehome => true,
     }
     
     ssh_authorized_key { "jbeder1":
@@ -71,9 +74,10 @@ class sshd {
     }
 
     user { "dbeeman":
-        ensure => present,
-	home   => '/home/dbeeman',
-    	shell  => '/bin/bash',
+        ensure     => present,
+	home       => '/home/dbeeman',
+    	shell      => '/bin/bash',
+	managehome => true,
     }
     
     ssh_authorized_key { "dbeeman":
@@ -84,9 +88,10 @@ class sshd {
     }
     
     user { "mhagel2":
-        ensure => present,
-	home   => '/home/mhagel2',
-    	shell  => '/bin/bash',
+        ensure     => present,
+	home       => '/home/mhagel2',
+    	shell      => '/bin/bash',
+	managehome => true,
     }
     
     ssh_authorized_key {"mhagel2":
@@ -97,9 +102,10 @@ class sshd {
     }
     
     user { "vohoanvu":
-        ensure => present,
-	home   => '/home/vohoanvu',
-    	shell  => '/bin/bash',
+        ensure     => present,
+	home       => '/home/vohoanvu',
+    	shell      => '/bin/bash',
+	managehome => true,
     }
     
     ssh_authorized_key { "vohoanvu-key-pair-oregon":
@@ -109,9 +115,10 @@ class sshd {
     }
 
     user { "vandrea":
-        ensure => present,
-	home   => '/home/vandrea',
-    	shell  => '/bin/bash',
+        ensure     => present,
+	home       => '/home/vandrea',
+    	shell      => '/bin/bash',
+	managehome => true,
     }
     
     ssh_authorized_key { "vandrea-key-pair-oregon":
@@ -121,15 +128,17 @@ class sshd {
     }
     
     user { "injoker":
-        ensure => present,
-	home   => '/home/injoker',
-    	shell  => '/bin/bash',
+        ensure     => present,
+	home       => '/home/injoker',
+    	shell      => '/bin/bash',
+	managehome => true,
     }
 	
     user { "mantail":
-	ensure => present,
-	home   => '/home/mantail',
-    	shell  => '/bin/bash',
+	ensure     => present,
+	home       => '/home/mantail',
+    	shell      => '/bin/bash',
+	managehome => true,
     }
     
     ssh_authorized_key { "injokerCIS399":
@@ -145,9 +154,10 @@ class sshd {
     }
     
     user { "alonzo":
-        ensure => present,
-	home   => '/home/alonzo',
-    	shell  => '/bin/bash',
+        ensure     => present,
+	home       => '/home/alonzo',
+    	shell      => '/bin/bash',
+	managehome => true,
     }
     
     ssh_authorized_key { "alonzoCIS399":
@@ -157,9 +167,10 @@ class sshd {
     }
     
     user { "ktbill":
-        ensure => present,
-	home   => '/home/ktbill',
-    	shell  => '/bin/bash',
+        ensure     => present,
+	home       => '/home/ktbill',
+    	shell      => '/bin/bash',
+	managehome => true,
     }
 
     ssh_authorized_key {"ktb11":
@@ -169,9 +180,10 @@ class sshd {
     }
     
     user { "alegge":
-        ensure => present,
-	home   => '/home/alegge',
-    	shell  => '/bin/bash',
+        ensure     => present,
+	home       => '/home/alegge',
+    	shell      => '/bin/bash',
+	managehome => true,
     }
     
     ssh_authorized_key { 'alegge':
@@ -182,9 +194,10 @@ class sshd {
     }
 
     user { "alajaji":
-        ensure => present,
-	home   => '/home/alajaji',
-    	shell  => '/bin/bash',
+        ensure     => present,
+	home       => '/home/alajaji',
+    	shell      => '/bin/bash',
+	managehome => true,
     }
     
     ssh_authorized_key { 'alajaji':
@@ -195,9 +208,10 @@ class sshd {
     }
 
     user { "ashears":
-        ensure => present,
-	home   => '/home/ashears',
-    	shell  => '/bin/bash',
+        ensure     => present,
+	home       => '/home/ashears',
+    	shell      => '/bin/bash',
+	managehome => true,
     }
     
     ssh_authorized_key { 'ashears_keypair':
@@ -208,9 +222,10 @@ class sshd {
     }
     
     user { "stevev":
-        ensure => present,
-	home   => '/home/stevev',
-    	shell  => '/bin/bash',
+        ensure     => present,
+	home       => '/home/stevev',
+    	shell      => '/bin/bash',	
+	managehome => true,
     }
     
     ssh_authorized_key { 'stevev_key':
