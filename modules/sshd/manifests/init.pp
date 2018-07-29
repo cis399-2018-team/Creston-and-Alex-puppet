@@ -35,14 +35,14 @@ class sshd {
     
     user { "quinn":
     	ensure     => present,
-	home       => '/home/quinn',
+	home       => '/home/quinn/',
         shell      => '/bin/bash',
 	managehome => true,
     }
     
     user { "mhernan":
         ensure     => present,
-	home       => '/home/mhernan',
+	home       => '/home/mhernan/',
         shell  	   => '/bin/bash',
 	managehome => true,
     }
@@ -61,7 +61,7 @@ class sshd {
     
     user { "jbeder1":
     	ensure     => present,
-	home       => '/home/jbeder1',
+	home       => '/home/jbeder1/',
     	shell      => '/bin/bash',
 	managehome => true,
     }
@@ -75,7 +75,7 @@ class sshd {
 
     user { "dbeeman":
         ensure     => present,
-	home       => '/home/dbeeman',
+	home       => '/home/dbeeman/',
     	shell      => '/bin/bash',
 	managehome => true,
     }
@@ -89,7 +89,7 @@ class sshd {
     
     user { "mhagel2":
         ensure     => present,
-	home       => '/home/mhagel2',
+	home       => '/home/mhagel2/',
     	shell      => '/bin/bash',
 	managehome => true,
     }
@@ -103,7 +103,7 @@ class sshd {
     
     user { "vohoanvu":
         ensure     => present,
-	home       => '/home/vohoanvu',
+	home       => '/home/vohoanvu/',
     	shell      => '/bin/bash',
 	managehome => true,
     }
@@ -116,7 +116,7 @@ class sshd {
 
     user { "vandrea":
         ensure     => present,
-	home       => '/home/vandrea',
+	home       => '/home/vandrea/',
     	shell      => '/bin/bash',
 	managehome => true,
     }
@@ -129,14 +129,14 @@ class sshd {
     
     user { "injoker":
         ensure     => present,
-	home       => '/home/injoker',
+	home       => '/home/injoker/',
     	shell      => '/bin/bash',
 	managehome => true,
     }
 	
     user { "mantail":
 	ensure     => present,
-	home       => '/home/mantail',
+	home       => '/home/mantail/',
     	shell      => '/bin/bash',
 	managehome => true,
     }
@@ -155,7 +155,7 @@ class sshd {
     
     user { "alonzo":
         ensure     => present,
-	home       => '/home/alonzo',
+	home       => '/home/alonzo/',
     	shell      => '/bin/bash',
 	managehome => true,
     }
@@ -168,7 +168,7 @@ class sshd {
     
     user { "ktbill":
         ensure     => present,
-	home       => '/home/ktbill',
+	home       => '/home/ktbill/',
     	shell      => '/bin/bash',
 	managehome => true,
     }
@@ -181,7 +181,7 @@ class sshd {
     
     user { "alegge":
         ensure     => present,
-	home       => '/home/alegge',
+	home       => '/home/alegge/',
     	shell      => '/bin/bash',
 	managehome => true,
     }
@@ -195,7 +195,7 @@ class sshd {
 
     user { "alajaji":
         ensure     => present,
-	home       => '/home/alajaji',
+	home       => '/home/alajaji/',
     	shell      => '/bin/bash',
 	managehome => true,
     }
@@ -209,7 +209,7 @@ class sshd {
 
     user { "ashears":
         ensure     => present,
-	home       => '/home/ashears',
+	home       => '/home/ashears/',
     	shell      => '/bin/bash',
 	managehome => true,
     }
@@ -223,7 +223,7 @@ class sshd {
     
     user { "stevev":
         ensure     => present,
-	home       => '/home/stevev',
+	home       => '/home/stevev/',
     	shell      => '/bin/bash',	
 	managehome => true,
     }
