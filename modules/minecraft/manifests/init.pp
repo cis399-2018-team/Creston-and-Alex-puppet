@@ -1,3 +1,5 @@
+mod 'puppet-minecraft', '4.0.0',
+
 class minecraft {
 	
 
