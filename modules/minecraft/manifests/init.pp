@@ -1,7 +1,7 @@
 class minecraft {
 	
 
-	file{'/server.jar':
+	file{'/etc/server.jar':
 		owner   => root,
 		ensure  =>  [file,present],
 		mode    => '0750',
