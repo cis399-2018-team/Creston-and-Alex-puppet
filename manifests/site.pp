@@ -10,7 +10,7 @@ node ip-10-0-6-195 {
 node ip-10-0-6-169 {
 
    include 'sshd'
-   include 'minecraft'
+   mod 'branan-minecraft', '1.0.0'
 }
 
 node ip-10-0-6-98 {
