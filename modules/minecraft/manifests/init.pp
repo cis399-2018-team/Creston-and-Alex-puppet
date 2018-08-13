@@ -5,7 +5,7 @@ class minecraft {
 		owner   => root,
 		ensure  =>  file,
 		mode    => '0750',
-		source  => ["puppet:///modules/minecraft/files/server.jar",],
+		source  => ["puppet:///modules/minecraft/server.jar",],
 	}
 
 }
