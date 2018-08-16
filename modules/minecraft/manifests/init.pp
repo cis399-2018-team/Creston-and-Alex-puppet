@@ -1,12 +1,12 @@
 class minecraft {
 	
-	file{'/ubuntu/minecraft/':
+	file{'/home/minecraft/':
 		owner   => root,
 		ensure  => [directory, present],
 		notify  => File['/minecraft/server.jar'],
 	}
 
-	file{'/ubuntu/minecraft/server.jar':
+	file{'/home/minecraft/server.jar':
 		owner   => root,
 		ensure  =>  [file,present],
 		mode    => '0750',
