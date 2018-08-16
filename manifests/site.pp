@@ -8,7 +8,6 @@ node ip-10-0-6-195 {
 }
 
 node ip-10-0-6-169 {
-   mod 'puppetlabs-java', '3.0.0',
    include 'sshd'
    include 'minecraft'
 }
