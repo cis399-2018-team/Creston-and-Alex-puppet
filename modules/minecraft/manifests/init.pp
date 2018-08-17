@@ -20,11 +20,4 @@ class minecraft {
 		source_permissions => use,
 		links              => manage,
 	}
-
-	user {'minecraft':
-		ensure      => present,
-		home        => '/opt/minecraft/',
-		shell       => '/bin/bash',
-		managehome  => true,
-	}
 }
