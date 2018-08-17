@@ -29,10 +29,9 @@ class minecraft {
 		mode    => '0750',
 	}
 	
-	file {'/opt/minecraft/vanilla/eula.txt':
-		path    => '/opt/minecraft/vanilla/eula.txt',
+	cron { "eula.txt":
+		command => "echo "eula=true" > /opt/minecraft/vanilla/eula.txt",
+		user    => root,
 		ensure  => present,
-		source  => ["puppet:///modules/minecraft/eula.txt"],
-		mode    => '0750',
 	}
 }
