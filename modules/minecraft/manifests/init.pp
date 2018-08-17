@@ -22,10 +22,16 @@ class minecraft {
 		owner              => 'root',		
 	}
 	
-	file {'/opt/minecraft/server.jar':
-		path    => '/opt/minecraft/server.jar',
+	file {'/opt/minecraft/vanilla/server.jar':
+		path    => '/opt/minecraft/vanilla/server.jar',
 		ensure  => [file, present],
 		source  => ["puppet:///modules/minecraft/server.jar"],
 		mode    => '0750',
+	}
+	
+	file {'/opt/minecraft/vanilla/eula.txt':
+		path  => '/opt/minecraft/vanilla/eula.txt',
+		ensure => [file, present],
+		source => ["puppet:///modules/minecraft/eula.txt"],
 	}
 }
