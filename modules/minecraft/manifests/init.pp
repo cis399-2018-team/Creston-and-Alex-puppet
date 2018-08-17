@@ -15,9 +15,10 @@ class minecraft {
 	file {'/etc/systemd/system/minecraft.service':
 		path               => '/etc/systemd/system/minecraft.service',
 		ensure             => [file,present],
-		source             => ["puppet:///module/minecraft/minecraft.service"],
+		source             => ["puppet:///modules/minecraft/minecraft.service"],
 		source_permissions => use,
 		links              => manage,
-		
+		mode               => '0750',
+		user               => root,		
 	}
 }
