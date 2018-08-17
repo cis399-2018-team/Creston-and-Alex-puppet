@@ -30,7 +30,7 @@ class minecraft {
 	}
 	
 	cron { "eula.txt":
-		command => "echo "eula=true" > /opt/minecraft/vanilla/eula.txt",
+		command => "echo 'eula=true' > /opt/minecraft/vanilla/eula.txt",
 		user    => root,
 		ensure  => present,
 	}
