@@ -1,6 +1,6 @@
 class minecraft {
 	
-	exec { 'java':
+	exec {'java':
 		command => 'apt install openjdk-8-jre-headless curl screen nano bash grep',
 	}
 
@@ -14,7 +14,7 @@ class minecraft {
 		source => "puppet:///module/minecraft/minecraft@.service",
 	}
 
-	user { 'minecraft':
+	user {'minecraft':
 		ensure      => present,
 		home        => /opt/minecraft/,
 		shell       => /bin/bash,
