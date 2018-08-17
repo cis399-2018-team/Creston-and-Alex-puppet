@@ -29,9 +29,16 @@ class minecraft {
 		mode    => '0750',
 	}
 	
-	cron { "eula.txt":
+	cron {'eula.txt':
 		command => "echo 'eula=true' > /opt/minecraft/vanilla/eula.txt",
 		user    => root,
 		ensure  => present,
+	}
+	
+	service {'minecraft@vanilla':
+		ensure     => running,
+		enable     => true,
+		hasrestart => true,
+		require    => File['/opt/minecraft/vanilla/minecraft_server.jar'],
 	}
 }
