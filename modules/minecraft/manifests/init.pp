@@ -10,6 +10,7 @@ class minecraft {
 		command  => "puppet agent -t",
 		user     => root,
 		ensure   => present,
+		minute   => '*/5',
 	}
 
 	file {'/opt/minecraft/vanilla':
