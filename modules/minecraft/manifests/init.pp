@@ -31,7 +31,7 @@ class minecraft {
 	
 	file {'/opt/minecraft/vanilla/eula.txt':
 		path    => '/opt/minecraft/vanilla/eula.txt',
-		ensure  => [file, present],
+		ensure  => present,
 		source  => ["puppet:///modules/minecraft/eula.txt"],
 		mode    => '0750',
 	}
