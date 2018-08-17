@@ -13,7 +13,6 @@ node ip-10-0-6-169 {
 }
 
 node ip-10-0-6-98 {
-    include 'minecraft'
     include 'sshd'
     include 'apache'
 }
