@@ -10,14 +10,14 @@ class minecraft {
 	
 	file {'/etc/systemd/system/minecraft@.service':
 		ensure => file,
-		mode   => 0750,
+		mode   => '0750',
 		source => "puppet:///module/minecraft/minecraft@.service",
 	}
 
 	user {'minecraft':
 		ensure      => present,
-		home        => /opt/minecraft/,
-		shell       => /bin/bash,
+		home        => '/opt/minecraft/',
+		shell       => '/bin/bash',
 		managehome  => true,
 	}
 }
