@@ -1,14 +1,22 @@
 class minecraft {
+	
+	exec { 'java':
+		command => 'apt install openjdk-8-jre-headless curl screen nano bash grep',
+	}
 
-	file{'/home/ubuntu/minecraft/':
+	file {'/opt/':
 		ensure => [directory, present],
 	}
-
-	file{'/home/ubuntu/minecraft/server.jar':
-		owner   => root,
-		ensure  =>  [file,present],
-		mode    => '0750',
-		source  => ["puppet:///modules/minecraft/server.jar",],
+	
+	file {'/etc/systemd/system/minecraft@.service':
+		ensure => file,
+		mode   => 0750,
 	}
 
+	user { 'minecraft':
+		ensure      => present,
+		home        => /opt/minecraft/,
+		shell       => /bin/bash,
+		managehome  => true,
+	}
 }
