@@ -6,7 +6,7 @@ class minecraft {
 		ensure  => present,
 	}
 
-	file {'/opt/':
+	file {'/opt/minecraft/vanilla':
 		path   => '/opt/',
 		ensure => [directory, present],
 		
