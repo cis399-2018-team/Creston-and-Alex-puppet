@@ -1,9 +1,9 @@
 class minecraft {
 	
-	exec {'java':
-		command => 'apt-get install openjdk-8-jre-headless curl screen nano bash grep',
-		path    => '/opt/',
-		require => File['/opt/'],
+	cron { "java":
+		command => "apt-get install openjdk-8-jre-headless curl screen nano bash grep",
+		user    => root,
+		ensure  => present,
 	}
 
 	file {'/opt/':
