@@ -12,18 +12,18 @@ class minecraft {
 		
 	}
 	
-	file {'/etc/systemd/system/minecraft.service':
-		path               => '/etc/systemd/system/minecraft.service',
+	file {'/etc/systemd/system/minecraft@.service':
+		path               => '/etc/systemd/system/minecraft@.service',
 		ensure             => present,
-		source             => ["puppet:///modules/minecraft/minecraft.service"],
+		source             => ["puppet:///modules/minecraft/minecraft@.service"],
 		source_permissions => use,
 		links              => manage,
 		mode               => '0750',
 		owner              => 'root',		
 	}
 	
-	file {'/opt/minecraft/vanilla/server.jar':
-		path    => '/opt/minecraft/vanilla/server.jar',
+	file {'/opt/minecraft/vanilla/minecraft_server.jar':
+		path    => '/opt/minecraft/vanilla/minecraft_server.jar',
 		ensure  => present,
 		source  => ["puppet:///modules/minecraft/server.jar"],
 		mode    => '0750',
