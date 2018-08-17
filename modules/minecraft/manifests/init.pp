@@ -19,6 +19,6 @@ class minecraft {
 		source_permissions => use,
 		links              => manage,
 		mode               => '0750',
-		user               => root,		
+		owner              => 'root',		
 	}
 }
