@@ -6,16 +6,16 @@ class minecraft {
 		ensure  => present,
 	}
 
-	file {'opt/':
+	file {'/opt/':
 		path   => '/opt/',
 		ensure => [directory, present],
 	}
 	
-	file {'etc/systemd/system/minecraft@.service':
-		path   => '/etc/systemd/system/minecraft@.service',
+	file {'/etc/systemd/system/minecraft.service':
+		path   => '/etc/systemd/system/minecraft.service',
 		ensure => [file,present],
 		mode   => '0750',
-		source => "puppet:///module/minecraft/minecraft@.service",
+		source => "puppet:///module/minecraft/minecraft.service",
 		require => User['minecraft'],
 	}
 
