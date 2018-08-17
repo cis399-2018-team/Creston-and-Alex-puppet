@@ -18,6 +18,7 @@ class minecraft {
 		mode               => '0750',
 		source             => ["puppet:///module/minecraft/minecraft.service"],
 		source_permissions => use,
+		links              => manage,
 		require            => User['minecraft'],
 		user               => root,
 	}
