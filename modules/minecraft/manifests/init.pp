@@ -20,7 +20,6 @@ class minecraft {
 		source_permissions => use,
 		links              => manage,
 		require            => User['minecraft'],
-		user               => root,
 	}
 
 	user {'minecraft':
