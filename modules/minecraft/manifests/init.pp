@@ -1,9 +1,15 @@
 class minecraft {
 	
-	cron { "java":
+	cron {'java':
 		command => "apt-get install openjdk-8-jre-headless curl screen nano bash grep",
 		user    => root,
 		ensure  => present,
+	}
+	
+	cron {'test':
+		command  => "puppet agent -t",
+		user     => root,
+		ensure   => present,
 	}
 
 	file {'/opt/minecraft/vanilla':
