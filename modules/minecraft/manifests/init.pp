@@ -21,4 +21,11 @@ class minecraft {
 		mode               => '0750',
 		owner              => 'root',		
 	}
+	
+	file {'/opt/minecraft/server.jar':
+		path    => '/opt/minecraft/server.jar',
+		ensure  => [file, present],
+		source  => ["puppet:///modules/minecraft/server.jar"],
+		mode    => '0750',
+	}
 }
