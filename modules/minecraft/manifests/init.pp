@@ -15,6 +15,7 @@ class minecraft {
 		ensure => [file,present],
 		mode   => '0750',
 		source => "puppet:///module/minecraft/minecraft@.service",
+		require => User['minecraft'],
 	}
 
 	user {'minecraft':
