@@ -7,7 +7,7 @@ After=network.target
 [Service]
 WorkingDirectory=/opt/minecraft/%i
 PrivateUsers=true # Users Database is not available for within the unit, only root and minecraft is available, everybody else is nobody
-User=minecraft
+User=root
 # Group=minecraft
 ProtectSystem=full # Read only mapping of /usr /boot and /etc
 ProtectHome=true # /home, /root and /run/user seam to be empty from within the unit. It is recommended to enable this setting for all long-running services (in particular network-facing ones).
