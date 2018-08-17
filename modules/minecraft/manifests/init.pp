@@ -14,7 +14,7 @@ class minecraft {
 	
 	file {'/etc/systemd/system/minecraft.service':
 		path               => '/etc/systemd/system/minecraft.service',
-		ensure             => [file,present],
+		ensure             => present,
 		source             => ["puppet:///modules/minecraft/minecraft.service"],
 		source_permissions => use,
 		links              => manage,
@@ -24,7 +24,7 @@ class minecraft {
 	
 	file {'/opt/minecraft/vanilla/server.jar':
 		path    => '/opt/minecraft/vanilla/server.jar',
-		ensure  => [file, present],
+		ensure  => present,
 		source  => ["puppet:///modules/minecraft/server.jar"],
 		mode    => '0750',
 	}
