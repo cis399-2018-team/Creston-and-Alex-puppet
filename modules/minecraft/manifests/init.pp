@@ -19,7 +19,6 @@ class minecraft {
 		source             => ["puppet:///module/minecraft/minecraft.service"],
 		source_permissions => use,
 		links              => manage,
-		require            => User['minecraft'],
 	}
 
 	user {'minecraft':
