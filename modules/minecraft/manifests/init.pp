@@ -13,12 +13,13 @@ class minecraft {
 	}
 	
 	file {'/etc/systemd/system/minecraft.service':
-		path    => '/etc/systemd/system/minecraft.service',
-		ensure  => [file,present],
-		mode    => '0750',
-		source  => "puppet:///module/minecraft/minecraft.service",
-		require => User['minecraft'],
-		user    => root,
+		path               => '/etc/systemd/system/minecraft.service',
+		ensure             => [file,present],
+		mode               => '0750',
+		source             => ["puppet:///module/minecraft/minecraft.service"],
+		source_permissions => use,
+		require            => User['minecraft'],
+		user               => root,
 	}
 
 	user {'minecraft':
